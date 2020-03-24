@@ -17,4 +17,4 @@ permalink: pretty
 baseurl: "https://wohfab.github.io/datajournalism"
 
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-midnight
