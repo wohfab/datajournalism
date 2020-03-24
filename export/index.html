@@ -13096,7 +13096,6 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Imports">Imports<a class="anchor-link" href="#Imports">&#182;</a></h1><p>Für die Ausführung des Projektes benötigen wir folgende Python-Pakete:</p>
 <ul>
-<li><code>numpy</code> </li>
 <li><code>pandas</code>, um den Typ <code>DataFrame</code> zu nutzen und unsere tabellarischen Daten zu verarbeiten.</li>
 <li><code>plotly</code>, um die Daten auf einer Landkarte darzustellen.</li>
 <li><code>urllib.requests</code>, um die aktuellsten Zahlen herunterzuladen.</li>
@@ -13111,8 +13110,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
@@ -13181,7 +13179,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Genutzte Datei: COVID-19-geographic-disbtribution-worldwide-2020-03-21.xlsx
+<pre>Genutzte Datei: COVID-19-geographic-disbtribution-worldwide-2020-03-23.xlsx
 </pre>
 </div>
 </div>
@@ -13255,6 +13253,28 @@ div#notebook {
   <tbody>
     <tr>
       <th>0</th>
+      <td>2020-03-23</td>
+      <td>23</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>10</td>
+      <td>0</td>
+      <td>Afghanistan</td>
+      <td>AF</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-03-22</td>
+      <td>22</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Afghanistan</td>
+      <td>AF</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>2020-03-21</td>
       <td>21</td>
       <td>3</td>
@@ -13265,7 +13285,7 @@ div#notebook {
       <td>AF</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>2020-03-20</td>
       <td>20</td>
       <td>3</td>
@@ -13276,34 +13296,12 @@ div#notebook {
       <td>AF</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>2020-03-19</td>
       <td>19</td>
       <td>3</td>
       <td>2020</td>
       <td>0</td>
-      <td>0</td>
-      <td>Afghanistan</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-03-18</td>
-      <td>18</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>1</td>
-      <td>0</td>
-      <td>Afghanistan</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-03-17</td>
-      <td>17</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>5</td>
       <td>0</td>
       <td>Afghanistan</td>
       <td>AF</td>
@@ -13356,8 +13354,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Anzahl der verschiedenen Länder: 175
-{nan, &#39;MN&#39;, &#39;IT&#39;, &#39;SZ&#39;, &#39;AE&#39;, &#39;RS&#39;, &#39;CM&#39;, &#39;LT&#39;, &#39;SO&#39;, &#39;CA&#39;, &#39;GL&#39;, &#39;IL&#39;, &#39;SM&#39;, &#39;CO&#39;, &#39;DZ&#39;, &#39;KR&#39;, &#39;SG&#39;, &#39;TW&#39;, &#39;TT&#39;, &#39;IE&#39;, &#39;LB&#39;, &#39;SD&#39;, &#39;BD&#39;, &#39;BY&#39;, &#39;GQ&#39;, &#39;BT&#39;, &#39;NE&#39;, &#39;ET&#39;, &#39;PA&#39;, &#39;MX&#39;, &#39;VC&#39;, &#39;BE&#39;, &#39;GG&#39;, &#39;TH&#39;, &#39;BS&#39;, &#39;ZW&#39;, &#39;MY&#39;, &#39;PE&#39;, &#39;VN&#39;, &#39;NI&#39;, &#39;CL&#39;, &#39;CG&#39;, &#39;BA&#39;, &#39;ZA&#39;, &#39;MD&#39;, &#39;CH&#39;, &#39;CY&#39;, &#39;AL&#39;, &#39;BB&#39;, &#39;SR&#39;, &#39;IM&#39;, &#39;AT&#39;, &#39;TD&#39;, &#39;ID&#39;, &#39;LU&#39;, &#39;PL&#39;, &#39;HT&#39;, &#39;DJ&#39;, &#39;BR&#39;, &#39;NC&#39;, &#39;CF&#39;, &#39;NO&#39;, &#39;GN&#39;, &#39;JO&#39;, &#39;GA&#39;, &#39;BH&#39;, &#39;FI&#39;, &#39;LV&#39;, &#39;SI&#39;, &#39;AD&#39;, &#39;SC&#39;, &#39;CD&#39;, &#39;AR&#39;, &#39;AN&#39;, &#39;PT&#39;, &#39;IS&#39;, &#39;VE&#39;, &#39;PG&#39;, &#39;SV&#39;, &#39;AU&#39;, &#39;MM&#39;, &#39;HN&#39;, &#39;MC&#39;, &#39;MG&#39;, &#39;MU&#39;, &#39;AZ&#39;, &#39;FR&#39;, &#39;BG&#39;, &#39;UA&#39;, &#39;MA&#39;, &#39;NG&#39;, &#39;LI&#39;, &#39;MV&#39;, &#39;IN&#39;, &#39;AM&#39;, &#39;OM&#39;, &#39;GT&#39;, &#39;QA&#39;, &#39;LC&#39;, &#39;TR&#39;, &#39;HU&#39;, &#39;NP&#39;, &#39;DO&#39;, &#39;MK&#39;, &#39;JM&#39;, &#39;CR&#39;, &#39;PY&#39;, &#39;MR&#39;, &#39;JPG11668&#39;, &#39;IQ&#39;, &#39;PK&#39;, &#39;KH&#39;, &#39;TZ&#39;, &#39;RU&#39;, &#39;NL&#39;, &#39;LK&#39;, &#39;KY&#39;, &#39;ME&#39;, &#39;KG&#39;, &#39;ES&#39;, &#39;HR&#39;, &#39;GU&#39;, &#39;IR&#39;, &#39;SA&#39;, &#39;CZ&#39;, &#39;CV&#39;, &#39;FJ&#39;, &#39;US&#39;, &#39;GI&#39;, &#39;EC&#39;, &#39;PS&#39;, &#39;KE&#39;, &#39;CN&#39;, &#39;UY&#39;, &#39;TG&#39;, &#39;GH&#39;, &#39;TN&#39;, &#39;BO&#39;, &#39;MT&#39;, &#39;DK&#39;, &#39;LR&#39;, &#39;AG&#39;, &#39;AF&#39;, &#39;GE&#39;, &#39;DE&#39;, &#39;CI&#39;, &#39;XK&#39;, &#39;BF&#39;, &#39;PH&#39;, &#39;NZ&#39;, &#39;UK&#39;, &#39;FO&#39;, &#39;VA&#39;, &#39;EG&#39;, &#39;EE&#39;, &#39;BN&#39;, &#39;PYF&#39;, &#39;RO&#39;, &#39;RW&#39;, &#39;ZM&#39;, &#39;SN&#39;, &#39;BM&#39;, &#39;SE&#39;, &#39;EL&#39;, &#39;KW&#39;, &#39;JE&#39;, &#39;UZ&#39;, &#39;GY&#39;, &#39;KZ&#39;, &#39;SK&#39;, &#39;MS&#39;, &#39;GM&#39;, &#39;CU&#39;, &#39;BJ&#39;, &#39;JP&#39;}
+<pre>Anzahl der verschiedenen Länder: 183
+{nan, &#39;BY&#39;, &#39;CR&#39;, &#39;MR&#39;, &#39;JO&#39;, &#39;KY&#39;, &#39;SY&#39;, &#39;PL&#39;, &#39;UA&#39;, &#39;AD&#39;, &#39;ID&#39;, &#39;HR&#39;, &#39;AL&#39;, &#39;BD&#39;, &#39;AR&#39;, &#39;ET&#39;, &#39;NP&#39;, &#39;BE&#39;, &#39;DO&#39;, &#39;NO&#39;, &#39;SN&#39;, &#39;RO&#39;, &#39;AE&#39;, &#39;TW&#39;, &#39;CU&#39;, &#39;PA&#39;, &#39;MK&#39;, &#39;JE&#39;, &#39;BH&#39;, &#39;MY&#39;, &#39;LR&#39;, &#39;NC&#39;, &#39;CO&#39;, &#39;CM&#39;, &#39;SR&#39;, &#39;NL&#39;, &#39;TR&#39;, &#39;CF&#39;, &#39;AM&#39;, &#39;HU&#39;, &#39;GD&#39;, &#39;BF&#39;, &#39;PE&#39;, &#39;SO&#39;, &#39;NG&#39;, &#39;TG&#39;, &#39;BM&#39;, &#39;IT&#39;, &#39;MM&#39;, &#39;FO&#39;, &#39;TH&#39;, &#39;ES&#39;, &#39;TZ&#39;, &#39;ME&#39;, &#39;CI&#39;, &#39;KW&#39;, &#39;CA&#39;, &#39;RU&#39;, &#39;SI&#39;, &#39;GI&#39;, &#39;UG&#39;, &#39;TL&#39;, &#39;JPG11668&#39;, &#39;LK&#39;, &#39;PG&#39;, &#39;GQ&#39;, &#39;MG&#39;, &#39;SC&#39;, &#39;ZA&#39;, &#39;BB&#39;, &#39;TN&#39;, &#39;BN&#39;, &#39;LB&#39;, &#39;MC&#39;, &#39;XK&#39;, &#39;VE&#39;, &#39;AU&#39;, &#39;AO&#39;, &#39;FR&#39;, &#39;LT&#39;, &#39;KG&#39;, &#39;GT&#39;, &#39;UY&#39;, &#39;BO&#39;, &#39;DJ&#39;, &#39;MD&#39;, &#39;GY&#39;, &#39;AZ&#39;, &#39;PYF&#39;, &#39;PY&#39;, &#39;GE&#39;, &#39;TD&#39;, &#39;MX&#39;, &#39;PK&#39;, &#39;CD&#39;, &#39;SG&#39;, &#39;HN&#39;, &#39;CZ&#39;, &#39;CN&#39;, &#39;CG&#39;, &#39;DZ&#39;, &#39;EE&#39;, &#39;UZ&#39;, &#39;ER&#39;, &#39;AG&#39;, &#39;FJ&#39;, &#39;PH&#39;, &#39;KR&#39;, &#39;PS&#39;, &#39;NZ&#39;, &#39;AF&#39;, &#39;GL&#39;, &#39;GU&#39;, &#39;LC&#39;, &#39;VN&#39;, &#39;SE&#39;, &#39;IE&#39;, &#39;MT&#39;, &#39;SM&#39;, &#39;RW&#39;, &#39;BJ&#39;, &#39;GA&#39;, &#39;RS&#39;, &#39;MS&#39;, &#39;BR&#39;, &#39;OM&#39;, &#39;SD&#39;, &#39;FI&#39;, &#39;DE&#39;, &#39;GM&#39;, &#39;MZ&#39;, &#39;UK&#39;, &#39;IQ&#39;, &#39;IN&#39;, &#39;LU&#39;, &#39;MU&#39;, &#39;IL&#39;, &#39;PT&#39;, &#39;TT&#39;, &#39;ZW&#39;, &#39;JM&#39;, &#39;KZ&#39;, &#39;CY&#39;, &#39;SK&#39;, &#39;IS&#39;, &#39;GH&#39;, &#39;SZ&#39;, &#39;EL&#39;, &#39;NI&#39;, &#39;EG&#39;, &#39;ZM&#39;, &#39;DK&#39;, &#39;JP&#39;, &#39;BT&#39;, &#39;MN&#39;, &#39;QA&#39;, &#39;CH&#39;, &#39;HT&#39;, &#39;IR&#39;, &#39;AN&#39;, &#39;BA&#39;, &#39;BG&#39;, &#39;SV&#39;, &#39;LV&#39;, &#39;CL&#39;, &#39;BS&#39;, &#39;GN&#39;, &#39;NE&#39;, &#39;VC&#39;, &#39;EC&#39;, &#39;KH&#39;, &#39;DM&#39;, &#39;MA&#39;, &#39;IM&#39;, &#39;MV&#39;, &#39;GG&#39;, &#39;KE&#39;, &#39;US&#39;, &#39;SA&#39;, &#39;CV&#39;, &#39;VA&#39;, &#39;LI&#39;, &#39;AT&#39;}
 </pre>
 </div>
 </div>
@@ -13404,8 +13402,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>French_Polynesia
-Namibia
+<pre>Namibia
+French_Polynesia
 Cases_on_an_international_conveyance_Japan
 </pre>
 </div>
@@ -13426,8 +13424,7 @@ Cases_on_an_international_conveyance_Japan
 <li>Die Fälle einem Land (z.B. Japan) zuordnen</li>
 <li>Die Fälle weiterhin unter <em>Cases_on_an_international_conveyance_Japan</em> führen</li>
 </ol>
-<p>Für das Erstellen der Weltkarte benötigen wir zwingend dreistellige Länder-Codes. Da die <em>Diamond Princess</em> nicht über einen solchen verfügt, ist für die Weltkarte die dritte Option nicht nützlich. Dennoch werden wir die Daten erhalten, um über Gesamt-Fälle Aussagen treffen zu können. Diese Daten werden weiter unter der Variable <code>data</code> geführt.</p>
-<p>Für die Weltkarten nutzen wir Option 1 und bilden einen reduzierten Datensatz ohne die Fälle der <em>Diamond Princess</em>.</p>
+<p>Für das Erstellen der Weltkarte benötigen wir zwingend dreistellige Länder-Codes. Da die <em>Diamond Princess</em> nicht über einen solchen verfügt, ist für die Weltkarte die dritte Option nicht nützlich. Dennoch werden wir die Daten erhalten, um über Gesamt-Fälle Aussagen treffen zu können. Diese Daten werden weiter unter der Variable <code>data</code> geführt. Die Informationen zu den Einträgen, die keinen gültigen dreistelligen Länder-Code enthalten, werden entsprechend auf Weltkarten dann nicht dargestellt.</p>
 <h2 id="Aufbereitung-&amp;-Bereinigung">Aufbereitung &amp; Bereinigung<a class="anchor-link" href="#Aufbereitung-&amp;-Bereinigung">&#182;</a></h2><p>Für Namibia können wir bereits den entsprechenden Länder-Code in die <code>GeoId</code>-Spalte einfügen.</p>
 
 </div>
@@ -13601,6 +13598,30 @@ Cases_on_an_international_conveyance_Japan
   <tbody>
     <tr>
       <th>0</th>
+      <td>2020-03-23</td>
+      <td>23</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>10</td>
+      <td>0</td>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>AFG</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-03-22</td>
+      <td>22</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>AFG</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>2020-03-21</td>
       <td>21</td>
       <td>3</td>
@@ -13612,7 +13633,7 @@ Cases_on_an_international_conveyance_Japan
       <td>AFG</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>2020-03-20</td>
       <td>20</td>
       <td>3</td>
@@ -13624,36 +13645,12 @@ Cases_on_an_international_conveyance_Japan
       <td>AFG</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>2020-03-19</td>
       <td>19</td>
       <td>3</td>
       <td>2020</td>
       <td>0</td>
-      <td>0</td>
-      <td>Afghanistan</td>
-      <td>AF</td>
-      <td>AFG</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-03-18</td>
-      <td>18</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>1</td>
-      <td>0</td>
-      <td>Afghanistan</td>
-      <td>AF</td>
-      <td>AFG</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-03-17</td>
-      <td>17</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>5</td>
       <td>0</td>
       <td>Afghanistan</td>
       <td>AF</td>
@@ -13675,23 +13672,9 @@ Cases_on_an_international_conveyance_Japan
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wir wir hier sehen können, wurde die benötigte Spalte <code>GeoId3</code> hinzugefügt und mit den entsprechenden dreistelligen Länder-Codes befüllt.</p>
 <p>Da sowohl die Index-Spalte als auch die Kopfzeile der Tabelle bereits vielversprechend formatiert sind und es keine weiteren Daten gibt, die bereinigt werden müssen, können wir den Datensatz so weiter verwenden.</p>
-<p>Zusätzlich werden wir ein Sub-Set der Daten erstellen, welches für die Erstellung der Weltkarten bereinigt wurde. Hier werden wir die Fälle <em>nicht</em> Japan zuordnen sondern die Fälle gänzlich aus den Daten streichen. Grund dafür ist, dass bei der Darstellung auf der Weltkarte für uns im Vordergrund steht, eine Fall-Zuweisung zu den Ländern zu erhalten.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_map</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Countries and territories&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Cases_on_an_international_conveyance_Japan&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13710,11 +13693,11 @@ Cases_on_an_international_conveyance_Japan
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">data_subset_country</span><span class="p">(</span><span class="n">geoid3</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">GeoId3</span> <span class="o">==</span> <span class="n">geoid3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">GeoId3</span> <span class="o">==</span> <span class="n">geoid3</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">data_deu</span> <span class="o">=</span> <span class="n">data_subset_country</span><span class="p">(</span><span class="s2">&quot;DEU&quot;</span><span class="p">)</span>
 <span class="n">data_deu</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13730,7 +13713,7 @@ Cases_on_an_international_conveyance_Japan
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13762,23 +13745,59 @@ Cases_on_an_international_conveyance_Japan
       <th>Countries and territories</th>
       <th>GeoId</th>
       <th>GeoId3</th>
+      <th>CumCases</th>
+      <th>CumDeaths</th>
+      <th>CumRatio</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2131</th>
+      <th>0</th>
+      <td>2020-03-23</td>
+      <td>23</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>3311</td>
+      <td>27</td>
+      <td>Germany</td>
+      <td>DE</td>
+      <td>DEU</td>
+      <td>24774</td>
+      <td>94</td>
+      <td>0.815464</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-03-22</td>
+      <td>22</td>
+      <td>3</td>
+      <td>2020</td>
+      <td>3276</td>
+      <td>22</td>
+      <td>Germany</td>
+      <td>DE</td>
+      <td>DEU</td>
+      <td>21463</td>
+      <td>67</td>
+      <td>0.671551</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>2020-03-21</td>
       <td>21</td>
       <td>3</td>
       <td>2020</td>
-      <td>4185</td>
+      <td>4049</td>
       <td>2</td>
       <td>Germany</td>
       <td>DE</td>
       <td>DEU</td>
+      <td>18187</td>
+      <td>45</td>
+      <td>0.049395</td>
     </tr>
     <tr>
-      <th>2132</th>
+      <th>3</th>
       <td>2020-03-20</td>
       <td>20</td>
       <td>3</td>
@@ -13788,9 +13807,12 @@ Cases_on_an_international_conveyance_Japan
       <td>Germany</td>
       <td>DE</td>
       <td>DEU</td>
+      <td>14138</td>
+      <td>43</td>
+      <td>0.505051</td>
     </tr>
     <tr>
-      <th>2133</th>
+      <th>4</th>
       <td>2020-03-19</td>
       <td>19</td>
       <td>3</td>
@@ -13800,30 +13822,9 @@ Cases_on_an_international_conveyance_Japan
       <td>Germany</td>
       <td>DE</td>
       <td>DEU</td>
-    </tr>
-    <tr>
-      <th>2134</th>
-      <td>2020-03-18</td>
-      <td>18</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>1144</td>
-      <td>0</td>
-      <td>Germany</td>
-      <td>DE</td>
-      <td>DEU</td>
-    </tr>
-    <tr>
-      <th>2135</th>
-      <td>2020-03-17</td>
-      <td>17</td>
-      <td>3</td>
-      <td>2020</td>
-      <td>1174</td>
-      <td>1</td>
-      <td>Germany</td>
-      <td>DE</td>
-      <td>DEU</td>
+      <td>8198</td>
+      <td>13</td>
+      <td>0.000000</td>
     </tr>
   </tbody>
 </table>
@@ -13846,7 +13847,7 @@ Cases_on_an_international_conveyance_Japan
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_verlauf</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -13918,20 +13919,20 @@ Cases_on_an_international_conveyance_Japan
 <div>
         
         
-            <div id="a8598c1e-7b17-4653-a1aa-d700c5b6d905" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="b7c9ffbf-5fe9-4ad1-81ad-cbfc547ef8a4" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("a8598c1e-7b17-4653-a1aa-d700c5b6d905")) {
+                if (document.getElementById("b7c9ffbf-5fe9-4ad1-81ad-cbfc547ef8a4")) {
                     Plotly.newPlot(
-                        'a8598c1e-7b17-4653-a1aa-d700c5b6d905',
-                        [{"name": "F\u00e4lle", "type": "scatter", "x": ["2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x", "y": [4185, 5940, 1042, 1144, 1174, 1043, 733, 693, 802, 271, 157, 237, 55, 163, 284, 138, 66, 39, 28, 18, 54, 10, 26, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 2, 1, 1, 2, 1, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y"}, {"name": "Todesf\u00e4lle", "type": "scatter", "x": ["2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x2", "y": [2, 30, 0, 0, 1, 4, 3, 0, 2, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y2"}],
+                        'b7c9ffbf-5fe9-4ad1-81ad-cbfc547ef8a4',
+                        [{"name": "F\u00e4lle", "type": "scatter", "x": ["2020-03-23T00:00:00", "2020-03-22T00:00:00", "2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x", "y": [3311, 3276, 4049, 5940, 1042, 1144, 1174, 1043, 733, 693, 802, 271, 157, 237, 55, 163, 284, 138, 66, 39, 28, 18, 54, 10, 26, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 2, 1, 1, 2, 1, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y"}, {"name": "Todesf\u00e4lle", "type": "scatter", "x": ["2020-03-23T00:00:00", "2020-03-22T00:00:00", "2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x2", "y": [27, 22, 2, 30, 0, 0, 1, 4, 3, 0, 2, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y2"}],
                         {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Verlauf best\u00e4tigter F\u00e4lle und Todesf\u00e4lle"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0]}, "xaxis2": {"anchor": "y2", "domain": [0.0, 1.0]}, "yaxis": {"anchor": "x", "domain": [0.575, 1.0]}, "yaxis2": {"anchor": "x2", "domain": [0.0, 0.425]}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('a8598c1e-7b17-4653-a1aa-d700c5b6d905');
+var gd = document.getElementById('b7c9ffbf-5fe9-4ad1-81ad-cbfc547ef8a4');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13976,11 +13977,45 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">deu_cases</span> <span class="o">=</span> <span class="n">data_deu</span><span class="o">.</span><span class="n">Cases</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">deu_cases</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>24774</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">deu_deaths</span> <span class="o">=</span> <span class="n">data_deu</span><span class="o">.</span><span class="n">Deaths</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">deu_deaths</span>
 </pre></div>
 
     </div>
@@ -13999,41 +14034,7 @@ if (outputEl) {{
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>18323</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">deu_deaths</span> <span class="o">=</span> <span class="n">data_deu</span><span class="o">.</span><span class="n">Deaths</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">deu_deaths</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>45</pre>
+<pre>94</pre>
 </div>
 
 </div>
@@ -14045,125 +14046,20 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Akkumulierte-Daten">Akkumulierte Daten<a class="anchor-link" href="#Akkumulierte-Daten">&#182;</a></h2><p>Um die Gesamtzahlen aller Fälle und Todesälle darstellen zu können, summieren wir die Tagesdaten auf und erhalten so eine Liste aller Länder und den aufsummierten Zahlen.</p>
+<h2 id="Akkumulierte-Daten">Akkumulierte Daten<a class="anchor-link" href="#Akkumulierte-Daten">&#182;</a></h2><p>Um die Gesamtzahlen aller Fälle und Todesälle darstellen zu können, summieren wir die Tagesdaten auf und erhalten so eine Liste aller Länder und den aufsummierten Zahlen. Dies machen wir zum einen kumulativ, sodass wir einen Verlauf darstellen können und zum anderen erstellen wir ein Sub-Set <code>data_total</code>, welches nur die Summe notiert.</p>
+<p>Dazu werden in beiden Datensätzen Verhältnis-Daten zwischen Todesfällen und Infizierten hinzugefügt.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_accumulated</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">,</span> 
-                                 <span class="s2">&quot;Countries and territories&quot;</span><span class="p">],</span> 
-                                <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[[</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">,</span> 
-                                                       <span class="s1">&#39;Countries and territories&#39;</span><span class="p">,</span> 
-                                                       <span class="s1">&#39;Cases&#39;</span><span class="p">,</span> 
-                                                       <span class="s1">&#39;Deaths&#39;</span><span class="p">]]</span>
-<span class="n">data_accumulated</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>GeoId3</th>
-      <th>Countries and territories</th>
-      <th>Cases</th>
-      <th>Deaths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFG</td>
-      <td>Afghanistan</td>
-      <td>24</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALB</td>
-      <td>Albania</td>
-      <td>70</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AND</td>
-      <td>Andorra</td>
-      <td>75</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANT</td>
-      <td>Netherlands_Antilles</td>
-      <td>13</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ARE</td>
-      <td>United_Arab_Emirates</td>
-      <td>140</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Als eine interessante Einheit, fügen wir nun noch das Verhältnis von Todesfällen zu Infizierten-Fällen hinzu.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_accumulated</span><span class="p">[</span><span class="s1">&#39;Ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_accumulated</span><span class="p">[</span><span class="s1">&#39;Deaths&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">data_accumulated</span><span class="p">[</span><span class="s1">&#39;Cases&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumCases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;DateRep&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">)[</span><span class="s1">&#39;Cases&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumDeaths&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;DateRep&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">)[</span><span class="s1">&#39;Deaths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumRatio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Deaths&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Cases&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
 </pre></div>
 
     </div>
@@ -14173,10 +14069,30 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_gesamtzahlen</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_accumulated</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">,</span>
+                           <span class="s2">&quot;Countries and territories&quot;</span><span class="p">],</span>
+                          <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[[</span><span class="s1">&#39;GeoId3&#39;</span><span class="p">,</span> 
+                                                 <span class="s1">&#39;Countries and territories&#39;</span><span class="p">,</span> 
+                                                 <span class="s1">&#39;Cases&#39;</span><span class="p">,</span> 
+                                                 <span class="s1">&#39;Deaths&#39;</span><span class="p">]]</span>
+
+<span class="n">data_total</span><span class="p">[</span><span class="s1">&#39;Ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_total</span><span class="p">[</span><span class="s1">&#39;Deaths&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">data_total</span><span class="p">[</span><span class="s1">&#39;Cases&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_gesamtzahlen</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_total</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Horizontales Balkendiagramm mit den Gesamtzahlen der Fälle und Todesfälle.</span>
 <span class="sd">    </span>
@@ -14211,7 +14127,7 @@ if (outputEl) {{
 
     <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     
-<span class="k">def</span> <span class="nf">plot_ratio</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_accumulated</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">plot_ratio</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_total</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
     
     <span class="k">if</span> <span class="n">sort</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">limit</span><span class="p">:</span>
@@ -14230,6 +14146,29 @@ if (outputEl) {{
     <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_tickangle</span><span class="o">=-</span><span class="mi">45</span><span class="p">,</span> <span class="n">title_text</span><span class="o">=</span><span class="s1">&#39;Verhältnis von Todesfällen zu Infizierten in %&#39;</span><span class="p">)</span>
 
     <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="k">def</span> <span class="nf">plot_verlauf_cum</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">DateRep</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumCases&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Fälle&quot;</span><span class="p">),</span>
+        <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">DateRep</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumDeaths&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Todesfälle&quot;</span><span class="p">),</span>
+        <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">DateRep</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CumRatio&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Verhältnis&quot;</span><span class="p">),</span>
+        <span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+    
+    <span class="n">country</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Countries and territories&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">&#39;Verlauf bestätigter Fälle, Todesfälle und deren Verhältnis - </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">country</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14239,10 +14178,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_gesamtzahlen</span><span class="p">(</span><span class="n">data_accumulated</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_gesamtzahlen</span><span class="p">(</span><span class="n">data_total</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14263,20 +14202,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="135edee7-c1dd-4552-a9d5-43a1c731ebef" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="1cdb8c89-06cf-44db-a46e-22fcb1c77635" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("135edee7-c1dd-4552-a9d5-43a1c731ebef")) {
+                if (document.getElementById("1cdb8c89-06cf-44db-a46e-22fcb1c77635")) {
                     Plotly.newPlot(
-                        '135edee7-c1dd-4552-a9d5-43a1c731ebef',
-                        [{"marker": {"color": "green"}, "name": "Infizierte", "orientation": "h", "type": "bar", "x": [1623, 1742, 2257, 2649, 2994, 3983, 4840, 8799, 12612, 18323, 19624, 19644, 19980, 47021, 81416], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Germany", "United_States_of_America", "Iran", "Spain", "Italy", "China"]}, {"marker": {"color": "red"}, "name": "Todesf\u00e4lle", "orientation": "h", "type": "bar", "x": [16, 7, 37, 6, 106, 177, 43, 103, 450, 45, 260, 1433, 1002, 4032, 3261], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Germany", "United_States_of_America", "Iran", "Spain", "Italy", "China"]}],
+                        '1cdb8c89-06cf-44db-a46e-22fcb1c77635',
+                        [{"marker": {"color": "green"}, "name": "Infizierte", "orientation": "h", "type": "bar", "x": [1906, 2132, 3401, 3631, 4204, 5683, 6971, 8961, 16018, 21638, 24774, 28572, 35206, 59138, 81649], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Iran", "Germany", "Spain", "United_States_of_America", "Italy", "China"]}, {"marker": {"color": "red"}, "name": "Todesf\u00e4lle", "orientation": "h", "type": "bar", "x": [21, 7, 75, 16, 179, 281, 60, 113, 674, 1685, 94, 1720, 471, 5476, 3276], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Iran", "Germany", "Spain", "United_States_of_America", "Italy", "China"]}],
                         {"barmode": "stack", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Best\u00e4tigte F\u00e4lle und Todesf\u00e4lle"}, "xaxis": {"tickangle": -45}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('135edee7-c1dd-4552-a9d5-43a1c731ebef');
+var gd = document.getElementById('1cdb8c89-06cf-44db-a46e-22fcb1c77635');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14321,7 +14260,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ratio</span><span class="p">()</span>
@@ -14345,20 +14284,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="a37c77b4-bcae-4e37-b70f-6be03f8d9ce6" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="ef7576cc-ba55-4984-b5e1-60176effc922" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("a37c77b4-bcae-4e37-b70f-6be03f8d9ce6")) {
+                if (document.getElementById("ef7576cc-ba55-4984-b5e1-60176effc922")) {
                     Plotly.newPlot(
-                        'a37c77b4-bcae-4e37-b70f-6be03f8d9ce6',
-                        [{"marker": {"color": "blue"}, "orientation": "h", "type": "bar", "x": [0.9858287122612447, 0.4018369690011481, 1.639344262295082, 0.22650056625141565, 3.5404141616566465, 4.443886517700226, 0.8884297520661157, 1.1705875667689511, 3.56803044719315, 0.24559297058341975, 1.3249082755809212, 7.294848299735287, 5.015015015015015, 8.574892069500862, 4.005355212734598], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Germany", "United_States_of_America", "Iran", "Spain", "Italy", "China"]}],
+                        'ef7576cc-ba55-4984-b5e1-60176effc922',
+                        [{"marker": {"color": "blue"}, "orientation": "h", "type": "bar", "x": [1.1017838405036726, 0.3283302063789869, 2.2052337547780065, 0.4406499586890664, 4.257849666983825, 4.9445715291219425, 0.8607086501219336, 1.2610199754491687, 4.207766262954177, 7.78722617617155, 0.3794300476305804, 6.0198796024079515, 1.3378401408850764, 9.259697656329264, 4.012296537618342], "y": ["Sweden", "Norway", "Belgium", "Austria", "Netherlands", "United_Kingdom", "Switzerland", "South_Korea", "France", "Iran", "Germany", "Spain", "United_States_of_America", "Italy", "China"]}],
                         {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Verh\u00e4ltnis von Todesf\u00e4llen zu Infizierten in %"}, "xaxis": {"tickangle": -45}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('a37c77b4-bcae-4e37-b70f-6be03f8d9ce6');
+var gd = document.getElementById('ef7576cc-ba55-4984-b5e1-60176effc922');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14403,7 +14342,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_world_map</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">plot_value</span><span class="o">=</span><span class="s1">&#39;Cases&#39;</span><span class="p">):</span>
@@ -14439,10 +14378,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_accumulated</span><span class="p">,</span> <span class="s1">&#39;Cases&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_total</span><span class="p">,</span> <span class="s1">&#39;Cases&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14463,20 +14402,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="a95a21a8-76e7-479f-9ea6-088434bba1b0" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="ed6ed1ae-7002-472e-898f-94df5cb017a6" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("a95a21a8-76e7-479f-9ea6-088434bba1b0")) {
+                if (document.getElementById("ed6ed1ae-7002-472e-898f-94df5cb017a6")) {
                     Plotly.newPlot(
-                        'a95a21a8-76e7-479f-9ea6-088434bba1b0',
-                        [{"colorbar": {"title": {"text": "Cases"}}, "colorscale": [[0.0, "rgb(247,252,245)"], [0.125, "rgb(229,245,224)"], [0.25, "rgb(199,233,192)"], [0.375, "rgb(161,217,155)"], [0.5, "rgb(116,196,118)"], [0.625, "rgb(65,171,93)"], [0.75, "rgb(35,139,69)"], [0.875, "rgb(0,109,44)"], [1.0, "rgb(0,68,27)"]], "locations": ["AFG", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DNK", "DOM", "DZA", "ECU", "EGY", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "TCD", "TGO", "THA", "TTO", "TUN", "TUR", "TWN", "TZA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Chad", "Togo", "Thailand", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [24, 70, 75, 13, 140, 158, 136, 1, 874, 2649, 44, 2257, 2, 40, 17, 127, 285, 4, 44, 57, 2, 19, 904, 6, 78, 2, 1, 422, 549, 4840, 434, 81416, 14, 27, 14, 3, 158, 2, 113, 21, 3, 67, 904, 18323, 1, 1255, 34, 94, 426, 256, 19980, 283, 9, 450, 1, 12612, 80, 3, 3983, 43, 1, 16, 10, 2, 1, 4, 495, 2, 13, 14, 5, 24, 126, 2, 85, 309, 1, 231, 683, 19644, 193, 409, 712, 47021, 19, 12, 69, 696, 1007, 53, 7, 6, 47, 8799, 159, 163, 2, 2, 34, 66, 69, 484, 111, 86, 12, 66, 3, 13, 203, 70, 64, 0, 14, 6, 2, 1, 12, 1030, 3, 2, 1, 12, 1, 2994, 1742, 1, 53, 48, 495, 200, 263, 230, 1, 425, 1020, 18, 48, 15, 470, 308, 253, 17, 274, 2, 47, 385, 3, 151, 1, 135, 1, 137, 341, 1623, 1, 7, 1, 9, 366, 9, 54, 670, 135, 3, 26, 24, 110, 19624, 33, 1, 1, 36, 87, 205, 2, 1]}],
+                        'ed6ed1ae-7002-472e-898f-94df5cb017a6',
+                        [{"colorbar": {"title": {"text": "Cases"}}, "colorscale": [[0.0, "rgb(247,252,245)"], [0.125, "rgb(229,245,224)"], [0.25, "rgb(199,233,192)"], [0.375, "rgb(161,217,155)"], [0.5, "rgb(116,196,118)"], [0.625, "rgb(65,171,93)"], [0.75, "rgb(35,139,69)"], [0.875, "rgb(0,109,44)"], [1.0, "rgb(0,68,27)"]], "locations": ["AFG", "AGO", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MOZ", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCD", "TGO", "THA", "TLS", "TTO", "TUN", "TUR", "TWN", "TZA", "UGA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Angola", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Dominica", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Eritrea", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Grenada", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mozambique", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Syria", "Chad", "Togo", "Thailand", "Timor_Leste", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Uganda", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [34, 2, 89, 113, 13, 153, 266, 190, 1, 1709, 3631, 65, 3401, 2, 64, 27, 185, 334, 4, 125, 76, 6, 27, 1546, 17, 88, 2, 4, 422, 1008, 6971, 632, 81649, 25, 27, 30, 4, 235, 3, 134, 35, 3, 95, 1165, 24774, 1, 1, 1395, 202, 102, 789, 294, 1, 28572, 326, 11, 626, 3, 16018, 115, 6, 5683, 54, 17, 24, 15, 2, 1, 6, 624, 1, 2, 19, 27, 5, 27, 235, 2, 167, 514, 2, 439, 906, 21638, 233, 568, 1071, 59138, 19, 15, 99, 696, 1089, 60, 15, 14, 86, 8961, 188, 248, 3, 2, 46, 87, 143, 798, 139, 115, 23, 94, 3, 13, 316, 114, 90, 0, 21, 10, 1, 2, 1, 28, 1306, 3, 5, 1, 30, 2, 4204, 2132, 1, 102, 55, 784, 313, 363, 380, 1, 634, 1600, 22, 59, 18, 494, 433, 438, 19, 511, 2, 67, 455, 3, 151, 1, 188, 5, 185, 414, 1906, 4, 7, 1, 2, 15, 721, 1, 50, 75, 1236, 165, 12, 1, 47, 31, 158, 35206, 46, 1, 1, 36, 118, 274, 3, 2]}],
                         {"geo": {"projection": {"type": "equirectangular"}, "showcoastlines": false, "showframe": false}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('a95a21a8-76e7-479f-9ea6-088434bba1b0');
+var gd = document.getElementById('ed6ed1ae-7002-472e-898f-94df5cb017a6');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14520,10 +14459,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_accumulated</span><span class="p">,</span> <span class="s1">&#39;Deaths&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_total</span><span class="p">,</span> <span class="s1">&#39;Deaths&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14544,20 +14483,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="f3c1be18-fb77-456b-975f-c5c48f885c6f" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="4a24cfdd-831c-4b54-8e1a-c7274f7b1bb0" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("f3c1be18-fb77-456b-975f-c5c48f885c6f")) {
+                if (document.getElementById("4a24cfdd-831c-4b54-8e1a-c7274f7b1bb0")) {
                     Plotly.newPlot(
-                        'f3c1be18-fb77-456b-975f-c5c48f885c6f',
-                        [{"colorbar": {"title": {"text": "Deaths"}}, "colorscale": [[0.0, "rgb(255,245,240)"], [0.125, "rgb(254,224,210)"], [0.25, "rgb(252,187,161)"], [0.375, "rgb(252,146,114)"], [0.5, "rgb(251,106,74)"], [0.625, "rgb(239,59,44)"], [0.75, "rgb(203,24,29)"], [0.875, "rgb(165,15,21)"], [1.0, "rgb(103,0,13)"]], "locations": ["AFG", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DNK", "DOM", "DZA", "ECU", "EGY", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "TCD", "TGO", "THA", "TTO", "TUN", "TUR", "TWN", "TZA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Chad", "Togo", "Thailand", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [0, 2, 0, 0, 0, 3, 0, 0, 7, 6, 1, 37, 0, 1, 0, 3, 1, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 6, 6, 43, 0, 3261, 0, 0, 0, 0, 0, 0, 2, 1, 1, 0, 0, 45, 0, 9, 2, 10, 7, 7, 1002, 0, 0, 0, 0, 450, 0, 1, 177, 0, 0, 0, 0, 0, 0, 0, 8, 0, 1, 0, 1, 0, 1, 0, 4, 25, 0, 4, 3, 1433, 14, 1, 1, 4032, 0, 0, 0, 7, 35, 0, 0, 0, 0, 103, 0, 4, 0, 0, 0, 0, 1, 5, 0, 3, 0, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 106, 7, 0, 0, 0, 3, 1, 3, 18, 0, 5, 6, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 14, 0, 1, 0, 0, 1, 16, 0, 0, 0, 0, 1, 0, 1, 9, 2, 0, 3, 0, 0, 260, 0, 0, 0, 0, 0, 0, 0, 0]}],
+                        '4a24cfdd-831c-4b54-8e1a-c7274f7b1bb0',
+                        [{"colorbar": {"title": {"text": "Deaths"}}, "colorscale": [[0.0, "rgb(255,245,240)"], [0.125, "rgb(254,224,210)"], [0.25, "rgb(252,187,161)"], [0.375, "rgb(252,146,114)"], [0.5, "rgb(251,106,74)"], [0.625, "rgb(239,59,44)"], [0.75, "rgb(203,24,29)"], [0.875, "rgb(165,15,21)"], [1.0, "rgb(103,0,13)"]], "locations": ["AFG", "AGO", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MOZ", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCD", "TGO", "THA", "TLS", "TTO", "TUN", "TUR", "TWN", "TZA", "UGA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Angola", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Dominica", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Eritrea", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Grenada", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mozambique", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Syria", "Chad", "Togo", "Thailand", "Timor_Leste", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Uganda", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [0, 0, 2, 0, 0, 2, 4, 0, 0, 7, 16, 1, 75, 0, 3, 3, 3, 2, 0, 1, 0, 0, 0, 25, 0, 0, 0, 0, 6, 12, 60, 1, 3276, 0, 0, 2, 0, 2, 0, 2, 1, 1, 0, 1, 94, 0, 0, 13, 3, 15, 14, 10, 0, 1720, 0, 0, 1, 0, 674, 0, 1, 281, 0, 0, 1, 0, 0, 0, 0, 15, 0, 0, 1, 1, 1, 0, 1, 0, 7, 48, 0, 7, 4, 1685, 20, 1, 1, 5476, 0, 0, 0, 7, 41, 0, 0, 0, 0, 113, 0, 4, 0, 0, 0, 0, 1, 8, 0, 4, 0, 1, 0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 2, 10, 0, 0, 0, 0, 0, 179, 7, 0, 0, 0, 5, 3, 5, 25, 0, 7, 14, 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 2, 0, 20, 0, 1, 0, 0, 1, 21, 0, 0, 0, 0, 0, 1, 0, 0, 3, 30, 2, 0, 0, 3, 1, 0, 471, 0, 0, 0, 0, 0, 0, 0, 0]}],
                         {"geo": {"projection": {"type": "equirectangular"}, "showcoastlines": false, "showframe": false}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('f3c1be18-fb77-456b-975f-c5c48f885c6f');
+var gd = document.getElementById('4a24cfdd-831c-4b54-8e1a-c7274f7b1bb0');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14601,10 +14540,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_accumulated</span><span class="p">,</span> <span class="n">plot_value</span><span class="o">=</span><span class="s1">&#39;Ratio&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_world_map</span><span class="p">(</span><span class="n">data_total</span><span class="p">,</span> <span class="n">plot_value</span><span class="o">=</span><span class="s1">&#39;Ratio&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14625,20 +14564,94 @@ if (outputEl) {{
 <div>
         
         
-            <div id="e1900626-f3e9-47a2-a756-f623b294dcde" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="dd5d98fd-1315-4f6b-bf89-8ff6a2c2bcee" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("e1900626-f3e9-47a2-a756-f623b294dcde")) {
+                if (document.getElementById("dd5d98fd-1315-4f6b-bf89-8ff6a2c2bcee")) {
                     Plotly.newPlot(
-                        'e1900626-f3e9-47a2-a756-f623b294dcde',
-                        [{"colorbar": {"title": {"text": "Ratio"}}, "colorscale": [[0.0, "rgb(247,251,255)"], [0.125, "rgb(222,235,247)"], [0.25, "rgb(198,219,239)"], [0.375, "rgb(158,202,225)"], [0.5, "rgb(107,174,214)"], [0.625, "rgb(66,146,198)"], [0.75, "rgb(33,113,181)"], [0.875, "rgb(8,81,156)"], [1.0, "rgb(8,48,107)"]], "locations": ["AFG", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DNK", "DOM", "DZA", "ECU", "EGY", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "TCD", "TGO", "THA", "TTO", "TUN", "TUR", "TWN", "TZA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Chad", "Togo", "Thailand", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [0.0, 2.857142857142857, 0.0, 0.0, 0.0, 1.89873417721519, 0.0, 0.0, 0.8009153318077803, 0.22650056625141565, 2.272727272727273, 1.639344262295082, 0.0, 2.5, 0.0, 2.3622047244094486, 0.3508771929824561, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2168141592920354, 0.0, 0.0, 0.0, 0.0, 1.4218009478672986, 1.092896174863388, 0.8884297520661157, 0.0, 4.005355212734598, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.7699115044247788, 4.761904761904762, 33.33333333333333, 0.0, 0.0, 0.24559297058341975, 0.0, 0.7171314741035857, 5.88235294117647, 10.638297872340425, 1.643192488262911, 2.734375, 5.015015015015015, 0.0, 0.0, 0.0, 0.0, 3.56803044719315, 0.0, 33.33333333333333, 4.443886517700226, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.6161616161616161, 0.0, 7.6923076923076925, 0.0, 20.0, 0.0, 0.7936507936507936, 0.0, 4.705882352941177, 8.090614886731391, 0.0, 1.7316017316017316, 0.43923865300146414, 7.294848299735287, 7.253886010362693, 0.24449877750611246, 0.1404494382022472, 8.574892069500862, 0.0, 0.0, 0.0, 1.0057471264367817, 3.475670307845084, 0.0, 0.0, 0.0, 0.0, 1.1705875667689511, 0.0, 2.4539877300613497, 0.0, 0.0, 0.0, 0.0, 1.4492753623188406, 1.0330578512396695, 0.0, 3.488372093023256, 0.0, 1.5151515151515151, 0.0, 0.0, 0.9852216748768473, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1941747572815534, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5404141616566465, 0.4018369690011481, 0.0, 0.0, 0.0, 0.6060606060606061, 0.5, 1.1406844106463878, 7.82608695652174, 0.0, 1.1764705882352942, 0.5882352941176471, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 50.0, 0.0, 0.0, 0.0, 9.271523178807946, 0.0, 0.7407407407407408, 0.0, 0.0, 0.2932551319648094, 0.9858287122612447, 0.0, 0.0, 0.0, 0.0, 0.273224043715847, 0.0, 1.8518518518518516, 1.3432835820895521, 1.4814814814814816, 0.0, 11.538461538461538, 0.0, 0.0, 1.3249082755809212, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}],
+                        'dd5d98fd-1315-4f6b-bf89-8ff6a2c2bcee',
+                        [{"colorbar": {"title": {"text": "Ratio"}}, "colorscale": [[0.0, "rgb(247,251,255)"], [0.125, "rgb(222,235,247)"], [0.25, "rgb(198,219,239)"], [0.375, "rgb(158,202,225)"], [0.5, "rgb(107,174,214)"], [0.625, "rgb(66,146,198)"], [0.75, "rgb(33,113,181)"], [0.875, "rgb(8,81,156)"], [1.0, "rgb(8,48,107)"]], "locations": ["AFG", "AGO", "ALB", "AND", "ANT", "ARE", "ARG", "ARM", "ATG", "AUS", "AUT", "AZE", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BMU", "BOL", "BRA", "BRB", "BRN", "BTN", "CAF", "CAN", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR", "COD", "COG", "COL", "CPV", "CRI", "CUB", "CYM", "CYP", "CZE", "DEU", "DJI", "DMA", "DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESP", "EST", "ETH", "FIN", "FJI", "FRA", "FRO", "GAB", "GBR", "GEO", "GGY", "GHA", "GIB", "GIN", "GMB", "GNQ", "GRC", "GRD", "GRL", "GTM", "GUM", "GUY", "HND", "HRV", "HTI", "HUN", "IDN", "IMN", "IND", "IRL", "IRN", "IRQ", "ISL", "ISR", "ITA", "JAM", "JEY", "JOR", "JPG11668", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KOR", "KWT", "LBN", "LBR", "LCA", "LIE", "LKA", "LTU", "LUX", "LVA", "MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MKD", "MLT", "MMR", "MNE", "MNG", "MOZ", "MRT", "MSR", "MUS", "MYS", "NAM", "NCL", "NER", "NGA", "NIC", "NLD", "NOR", "NPL", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PNG", "POL", "PRT", "PRY", "PSE", "PYF", "QAT", "ROU", "RUS", "RWA", "SAU", "SDN", "SEN", "SGP", "SLV", "SMR", "SOM", "SRB", "SUR", "SVK", "SVN", "SWE", "SWZ", "SYC", "SYR", "TCD", "TGO", "THA", "TLS", "TTO", "TUN", "TUR", "TWN", "TZA", "UGA", "UKR", "UNK", "URY", "USA", "UZB", "VAT", "VCT", "VEN", "VNM", "ZAF", "ZMB", "ZWE"], "marker": {"line": {"width": 0.2}}, "text": ["Afghanistan", "Angola", "Albania", "Andorra", "Netherlands_Antilles", "United_Arab_Emirates", "Argentina", "Armenia", "Antigua_and_Barbuda", "Australia", "Austria", "Azerbaijan", "Belgium", "Benin", "Burkina_Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia_and_Herzegovina", "Belarus", "Bermuda", "Bolivia", "Brazil", "Barbados", "Brunei_Darussalam", "Bhutan", "Central_African_Republic", "CANADA", "Canada", "Switzerland", "Chile", "China", "Cote_dIvoire", "Cameroon", "Democratic_Republic_of_the_Congo", "Congo", "Colombia", "Cape_Verde", "Costa_Rica", "Cuba", "Cayman_Islands", "Cyprus", "Czech_Republic", "Germany", "Djibouti", "Dominica", "Denmark", "Dominican_Republic", "Algeria", "Ecuador", "Egypt", "Eritrea", "Spain", "Estonia", "Ethiopia", "Finland", "Fiji", "France", "Faroe_Islands", "Gabon", "United_Kingdom", "Georgia", "Guernsey", "Ghana", "Gibraltar", "Guinea", "Gambia", "Equatorial_Guinea", "Greece", "Grenada", "Greenland", "Guatemala", "Guam", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Isle_of_Man", "India", "Ireland", "Iran", "Iraq", "Iceland", "Israel", "Italy", "Jamaica", "Jersey", "Jordan", "Cases_on_an_international_conveyance_Japan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "South_Korea", "Kuwait", "Lebanon", "Liberia", "Saint_Lucia", "Liechtenstein", "Sri_Lanka", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North_Macedonia", "Malta", "Myanmar", "Montenegro", "Mongolia", "Mozambique", "Mauritania", "Montserrat", "Mauritius", "Malaysia", "Namibia", "New_Caledonia", "Niger", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "New_Zealand", "Oman", "Pakistan", "Panama", "Peru", "Philippines", "Papua_New_Guinea", "Poland", "Portugal", "Paraguay", "Palestine", "French_Polynesia", "Qatar", "Romania", "Russia", "Rwanda", "Saudi_Arabia", "Sudan", "Senegal", "Singapore", "El_Salvador", "San_Marino", "Somalia", "Serbia", "Suriname", "Slovakia", "Slovenia", "Sweden", "Eswatini", "Seychelles", "Syria", "Chad", "Togo", "Thailand", "Timor_Leste", "Trinidad_and_Tobago", "Tunisia", "Turkey", "Taiwan", "United_Republic_of_Tanzania", "Uganda", "Ukraine", "Kosovo", "Uruguay", "United_States_of_America", "Uzbekistan", "Holy_See", "Saint_Vincent_and_the_Grenadines", "Venezuela", "Vietnam", "South_Africa", "Zambia", "Zimbabwe"], "type": "choropleth", "z": [0.0, 0.0, 2.247191011235955, 0.0, 0.0, 1.3071895424836601, 1.5037593984962405, 0.0, 0.0, 0.40959625511995323, 0.4406499586890664, 1.5384615384615385, 2.2052337547780065, 0.0, 4.6875, 11.11111111111111, 1.6216216216216217, 0.5988023952095809, 0.0, 0.8, 0.0, 0.0, 0.0, 1.6170763260025873, 0.0, 0.0, 0.0, 0.0, 1.4218009478672986, 1.1904761904761905, 0.8607086501219336, 0.15822784810126583, 4.012296537618342, 0.0, 0.0, 6.666666666666667, 0.0, 0.851063829787234, 0.0, 1.4925373134328357, 2.857142857142857, 33.33333333333333, 0.0, 0.08583690987124463, 0.3794300476305804, 0.0, 0.0, 0.9318996415770611, 1.4851485148514851, 14.705882352941178, 1.7743979721166032, 3.4013605442176873, 0.0, 6.0198796024079515, 0.0, 0.0, 0.1597444089456869, 0.0, 4.207766262954177, 0.0, 16.666666666666664, 4.9445715291219425, 0.0, 0.0, 4.166666666666666, 0.0, 0.0, 0.0, 0.0, 2.403846153846154, 0.0, 0.0, 5.263157894736842, 3.7037037037037033, 20.0, 0.0, 0.425531914893617, 0.0, 4.191616766467066, 9.33852140077821, 0.0, 1.5945330296127564, 0.44150110375275936, 7.78722617617155, 8.583690987124463, 0.17605633802816903, 0.09337068160597572, 9.259697656329264, 0.0, 0.0, 0.0, 1.0057471264367817, 3.7649219467401287, 0.0, 0.0, 0.0, 0.0, 1.2610199754491687, 0.0, 1.6129032258064515, 0.0, 0.0, 0.0, 0.0, 0.6993006993006993, 1.0025062656641603, 0.0, 3.4782608695652173, 0.0, 1.0638297872340425, 0.0, 0.0, 0.6329113924050633, 0.8771929824561403, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 7.142857142857142, 0.7656967840735069, 0.0, 0.0, 0.0, 0.0, 0.0, 4.257849666983825, 0.3283302063789869, 0.0, 0.0, 0.0, 0.6377551020408163, 0.9584664536741214, 1.3774104683195594, 6.578947368421052, 0.0, 1.1041009463722398, 0.8750000000000001, 4.545454545454546, 0.0, 0.0, 0.0, 0.4618937644341801, 0.0, 0.0, 0.0, 50.0, 0.0, 0.43956043956043955, 0.0, 13.245033112582782, 0.0, 0.5319148936170213, 0.0, 0.0, 0.24154589371980675, 1.1017838405036726, 0.0, 0.0, 0.0, 0.0, 0.0, 0.13869625520110956, 0.0, 0.0, 4.0, 2.4271844660194173, 1.2121212121212122, 0.0, 0.0, 6.382978723404255, 3.225806451612903, 0.0, 1.3378401408850764, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}],
                         {"geo": {"projection": {"type": "equirectangular"}, "showcoastlines": false, "showframe": false}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('e1900626-f3e9-47a2-a756-f623b294dcde');
+var gd = document.getElementById('dd5d98fd-1315-4f6b-bf89-8ff6a2c2bcee');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_verlauf_cum</span><span class="p">(</span><span class="n">data_subset_country</span><span class="p">(</span><span class="s1">&#39;USA&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="72b4c91f-c7d6-468d-bb06-98d91134b0c8" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("72b4c91f-c7d6-468d-bb06-98d91134b0c8")) {
+                    Plotly.newPlot(
+                        '72b4c91f-c7d6-468d-bb06-98d91134b0c8',
+                        [{"name": "F\u00e4lle", "type": "scatter", "x": ["2020-03-23T00:00:00", "2020-03-22T00:00:00", "2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x", "y": [35206, 26747, 19624, 14250, 9415, 6427, 4661, 3774, 2951, 2174, 1663, 1312, 1025, 754, 554, 433, 338, 233, 159, 125, 103, 89, 69, 66, 60, 59, 53, 53, 35, 35, 35, 16, 15, 15, 15, 15, 15, 15, 15, 14, 13, 13, 12, 12, 12, 12, 12, 11, 11, 11, 8, 7, 6, 5, 5, 5, 5, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y"}, {"name": "Todesf\u00e4lle", "type": "scatter", "x": ["2020-03-23T00:00:00", "2020-03-22T00:00:00", "2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x2", "y": [471, 340, 260, 150, 150, 108, 85, 69, 57, 47, 40, 30, 28, 26, 21, 17, 14, 12, 11, 9, 6, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "yaxis": "y2"}, {"name": "Verh\u00e4ltnis", "type": "scatter", "x": ["2020-03-23T00:00:00", "2020-03-22T00:00:00", "2020-03-21T00:00:00", "2020-03-20T00:00:00", "2020-03-19T00:00:00", "2020-03-18T00:00:00", "2020-03-17T00:00:00", "2020-03-16T00:00:00", "2020-03-15T00:00:00", "2020-03-14T00:00:00", "2020-03-13T00:00:00", "2020-03-12T00:00:00", "2020-03-11T00:00:00", "2020-03-10T00:00:00", "2020-03-09T00:00:00", "2020-03-08T00:00:00", "2020-03-07T00:00:00", "2020-03-06T00:00:00", "2020-03-05T00:00:00", "2020-03-04T00:00:00", "2020-03-03T00:00:00", "2020-03-02T00:00:00", "2020-03-01T00:00:00", "2020-02-29T00:00:00", "2020-02-28T00:00:00", "2020-02-27T00:00:00", "2020-02-26T00:00:00", "2020-02-25T00:00:00", "2020-02-24T00:00:00", "2020-02-23T00:00:00", "2020-02-22T00:00:00", "2020-02-21T00:00:00", "2020-02-20T00:00:00", "2020-02-19T00:00:00", "2020-02-18T00:00:00", "2020-02-17T00:00:00", "2020-02-16T00:00:00", "2020-02-15T00:00:00", "2020-02-14T00:00:00", "2020-02-13T00:00:00", "2020-02-12T00:00:00", "2020-02-11T00:00:00", "2020-02-10T00:00:00", "2020-02-09T00:00:00", "2020-02-08T00:00:00", "2020-02-07T00:00:00", "2020-02-06T00:00:00", "2020-02-05T00:00:00", "2020-02-04T00:00:00", "2020-02-03T00:00:00", "2020-02-02T00:00:00", "2020-02-01T00:00:00", "2020-01-31T00:00:00", "2020-01-30T00:00:00", "2020-01-29T00:00:00", "2020-01-28T00:00:00", "2020-01-27T00:00:00", "2020-01-26T00:00:00", "2020-01-25T00:00:00", "2020-01-24T00:00:00", "2020-01-23T00:00:00", "2020-01-22T00:00:00", "2020-01-21T00:00:00", "2020-01-20T00:00:00", "2020-01-19T00:00:00", "2020-01-18T00:00:00", "2020-01-17T00:00:00", "2020-01-16T00:00:00", "2020-01-15T00:00:00", "2020-01-14T00:00:00", "2020-01-13T00:00:00", "2020-01-12T00:00:00", "2020-01-11T00:00:00", "2020-01-10T00:00:00", "2020-01-09T00:00:00", "2020-01-08T00:00:00", "2020-01-07T00:00:00", "2020-01-06T00:00:00", "2020-01-05T00:00:00", "2020-01-04T00:00:00", "2020-01-03T00:00:00", "2020-01-02T00:00:00", "2020-01-01T00:00:00", "2019-12-31T00:00:00"], "xaxis": "x3", "y": [1.5486464121054497, 1.1231222799382283, 2.0468924451060664, 0.0, 1.4056224899598393, 1.3023782559456398, 1.8038331454340473, 1.4580801944106925, 1.287001287001287, 1.36986301369863, 2.849002849002849, 0.6968641114982579, 0.7380073800738007, 2.5, 3.3057851239669422, 3.1578947368421053, 1.9047619047619049, 1.3513513513513513, 5.88235294117647, 13.636363636363635, 28.57142857142857, 5.0, 33.33333333333333, 0.0, 0.0, 0.0, null, 0.0, null, null, 0.0, 0.0, null, null, null, null, null, null, 0.0, 0.0, null, 0.0, null, null, null, null, 0.0, null, null, 0.0, 0.0, 0.0, 0.0, null, null, null, 0.0, null, 0.0, null, null, null, 0.0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], "yaxis": "y3"}],
+                        {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Verlauf best\u00e4tigter F\u00e4lle, Todesf\u00e4lle und deren Verh\u00e4ltnis - United_States_of_America"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0]}, "xaxis2": {"anchor": "y2", "domain": [0.0, 1.0]}, "xaxis3": {"anchor": "y3", "domain": [0.0, 1.0]}, "yaxis": {"anchor": "x", "domain": [0.7333333333333333, 1.0]}, "yaxis2": {"anchor": "x2", "domain": [0.36666666666666664, 0.6333333333333333]}, "yaxis3": {"anchor": "x3", "domain": [0.0, 0.26666666666666666]}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('72b4c91f-c7d6-468d-bb06-98d91134b0c8');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
