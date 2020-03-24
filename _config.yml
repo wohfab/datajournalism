@@ -1,2 +1,17 @@
 theme: jekyll-theme-midnight
 
+site: Data Journalism - COVID-19
+url: https://wohfab.github.io/datajournalism
+title: Data Journalism - COVID-19
+twitter:
+  username: wohfab
+  card: summary
+  creator: wohfab
+author:
+  twitter: wohfab
+  name: wohfab
+  email: fw@fabianwohlgemuth.de
+  url: https://www.fabianwohlgemuth.de
+permalink: pretty
+
+baseurl: "https://wohfab.github.io/datajournalism"
