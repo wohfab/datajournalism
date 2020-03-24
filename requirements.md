@@ -1,0 +1,4 @@
+xlrd
+plotly
+pandas
+datetime
